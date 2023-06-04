@@ -1,0 +1,638 @@
+:root {
+
+    --1brightest: #fbfafe;
+    --2: #e8e5f9;
+    --3: #b6afec;
+    --4: #7465d9;
+    --5: #3f2cad;
+    --6: #271a63;
+    --7: #150c2d;
+    --8darkest: #0e0719;
+
+  }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+button {
+
+    outline: none;
+
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, image {
+
+    display: block;
+
+}
+
+body {
+
+    line-height: 1;
+
+}
+
+ol, ul {
+
+    list-style: none;
+
+}
+
+blockquote, q {
+
+    quotes: none;
+
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+
+    content: '';
+    content: none;
+
+}
+
+table {
+
+    border-collapse: collapse;
+    border-spacing: 0;
+
+}
+
+body::-webkit-scrollbar, p::-webkit-scrollbar {
+
+    width: .4em;
+
+}
+
+body::-webkit-scrollbar-track, p::-webkit-scrollbar-track {
+
+    background-color: var(--8darkest);
+
+}
+
+body::-webkit-scrollbar-thumb {
+
+    background-color: var(--5);
+
+}
+
+body {
+
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+
+}
+
+.center {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.grid-container {
+
+    max-width: 100vw;
+    height: 115vh;
+    display: grid;
+    background-color: var(--8darkest);
+    grid-template-areas:
+        "top top top top top top top"
+        "left name name name name name right"
+        "bot bot bot bot bot bot bot"
+        "foot foot foot foot foot foot foot";
+
+}
+
+.bg-top {
+
+    grid-area: top;
+    width: 14.28vw;
+    height: 25vh;
+
+}
+
+.bg-left {
+
+    grid-area: left;
+    width: 14.28vw;
+    height: 40vh;
+
+}
+
+.bg-right {
+
+    grid-area: right;
+    width: 14.28vw;
+    height: 40vh;
+
+}
+
+.bg-bot {
+
+    grid-area: bot;
+    width: 14.28vw;
+    height: 35vh;
+
+}
+
+.footer-area {
+
+    max-width: 100vw;
+    height: max(15vh, 30px);
+    background-color: var(--7);
+    border-top: 2px solid var(--6);
+    color: var(--2);
+    grid-area: foot;
+    font-size: 1.5rem;
+    font-weight: 300;
+    
+}
+
+.footer-area span {
+
+    color: var(--3);
+
+}
+
+.adress:hover{
+
+    text-shadow: 0 0 8px var(--3);
+
+}
+
+.name-area {
+
+    grid-area: name;
+    height: 40vh;
+    text-align: center;
+    padding: 0 7vw 0 7vw;
+
+}
+
+.name {
+
+    font-size: max(6vw, 28px);
+    font-weight: 810;
+    color: var(--1brightest);
+    user-select: none;
+    background-color: var(--8darkest);
+    height: 1.2em;
+    padding-top: .2em;
+
+}
+
+.ani-name:hover {
+
+    background: linear-gradient(120deg, var(--1brightest), var(--1brightest), var(--1brightest), var(--1brightest), var(--1brightest), var(--1brightest), var(--5), var(--4), var(--1brightest)) var(--1brightest) no-repeat 0 0;
+    background-size: 0% 100%;
+    animation: stripes 1.4s ease forwards;
+
+}
+
+.ani-name:hover .name {
+
+    mix-blend-mode: darken;
+    
+}
+
+@keyframes stripes {
+    to {
+      background-size: 100% 100%;
+    }
+}
+
+.first-line {
+
+    font-size: 2.8rem;
+    font-weight: 640;
+    color: var(--1brightest);
+    user-select: none;
+
+}
+
+.second-line {
+
+    font-size: 2.8rem;
+    font-weight: 640;
+    color: var(--1brightest);
+    margin-bottom: .4rem;
+    user-select: none;
+
+}
+
+.third-line {
+
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: var(--1brightest);
+    user-select: none;
+
+}
+
+.inline-word-container {
+
+    display: inline-block;
+
+}
+
+.inline-word {
+
+    display: inline-block;
+    height: 2.9rem;
+    overflow: hidden;
+
+}
+
+.inline-word-jp {
+
+        display: inline-block;
+        height: 2.1rem;
+        overflow: hidden;
+        padding-top: .3rem;
+
+}
+
+.inline-word > div {
+
+    transition: transform .2s;
+
+}
+
+.inline-word-jp > div {
+
+    transition: transform .2s;
+
+}
+
+.inline-word-bottom {
+
+    color: var(--4);
+
+}
+
+.inline-word-container--active .inline-word > div {
+
+    transform: translateY(-100%);
+
+}
+
+.inline-word-container--active .inline-word-jp > div {
+
+    transform: translateY(-100%);
+
+}
+
+.project-button {
+
+    background-color: var(--7);
+    font-size: 1.37rem;
+    font-weight: 700;
+    padding: .6em .5em .6em .5em;
+    margin-top: 3vh;
+    border: 2px solid var(--4);
+    color: var(--1brightest);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 8.6em;
+    text-align: center;
+
+}
+
+.project-button:hover {
+
+    box-shadow: 0 0 10px 4px var(--6);
+    border: 2px solid var(--3);
+    background-color: var(--6);
+    transform: scale(1.04);
+
+}
+
+.project-button span {
+
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.2s;
+
+}
+
+.project-button span:after {
+
+    content: '\21B7';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.2s;
+
+}
+
+.project-button:hover span {
+
+    padding-right: 1.3rem;
+
+}
+
+.project-button:hover span:after {
+
+    opacity: 1;
+    right: 0;
+
+}
+
+.logo {
+
+    font-size: 3rem;
+    font-weight: 810;
+    color: var(--1brightest);
+    margin: 6px 0px 0px 9px;
+    position: absolute;
+    user-select: none;
+    transition: transform .3s ease, color .3s;
+    z-index: 3;
+
+}
+
+.logo:hover {
+
+    transform: scale(1.2);
+    color: var(--4);
+
+}
+
+.left-bar {
+
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin-left: -8.2rem;
+
+}
+
+.left-bar ul li a {
+
+    width: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+    color: var(--1brightest);
+
+}
+
+.left-bar ul li a span {
+
+    font-size: 2rem;
+    text-align: right;
+    user-select: none;
+
+}
+
+.left-bar ul li a i {
+
+    font-size: 2.4rem;
+    margin-left: 1.9rem;
+
+} 
+
+.left-bar li {
+
+    background-color: var(--7);
+    transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.left-bar li:nth-child(odd) {
+
+    background-color: var(--6);
+    transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.left-bar li:hover {
+
+    transform: translateX(45%);
+
+}
+
+.left-bar-cv i {
+
+    margin-right: .45rem;
+
+}
+
+.left-bar-github i {
+
+    margin-right: 0.23rem;
+
+}
+
+.left-bar-socials i {
+
+    margin-right: .09rem;
+
+}
+
+.left-bar-blog i {
+
+    margin-right: .4rem;
+
+}
+
+.left-bar-about {
+
+    cursor: pointer;
+
+}
+
+.left-bar-socials {
+
+    cursor: pointer;
+
+}
+
+.holder {
+
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+
+}
+
+.about-container {
+
+    background-color: var(--7);
+    height: auto;
+    width: 60vw;
+    color: var(--2);
+    font-size: 1.6rem;
+    padding: 0 2rem 3.4rem 2rem;
+    text-align: center;
+    display: none;
+    border: 1px solid var(--4);
+    box-shadow: 0 0 10px 7px var(--6);
+
+}
+
+.about-container button {
+
+    border: 1px solid var(--4);
+    background-color: var(--6);
+    margin: .8rem .4% .8rem 98.6%;
+    width: 1.8rem;
+    height: 1.8rem;
+    color: var(--1brightest);
+    padding-bottom: .1rem;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+.about-container button:hover {
+
+    box-shadow: 0 0 10px 4px var(--6);
+    background-color: var(--5);
+
+}
+
+.socials-container {
+
+    background-color: var(--7);
+    height: auto;
+    width: max(90vw, auto);
+    color: var(--2);
+    padding: 0 2rem 3.4rem 2rem;
+    display: none;
+    border: 1px solid var(--4);
+    box-shadow: 0 0 8px 5px var(--6);
+
+}
+
+.socials-container button {
+
+    border: 1px solid var(--4);
+    background-color: var(--6);
+    margin: .8rem 1% .8rem 98%;
+    width: 1.8rem;
+    height: 1.8rem;
+    color: var(--1brightest);
+    padding-bottom: .1rem;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+.socials-container button:hover {
+
+    box-shadow: 0 0 10px 4px var(--6);
+    background-color: var(--5);
+
+}
+
+.socials-grid {
+
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    padding-right: 1rem;
+
+}
+
+.socials-grid a {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+    transition: transform .3s, background-color .3s;
+    z-index: 3;
+
+}
+
+.socials-grid a span {
+
+    font-size: 2.6rem;
+    color: var(--2);
+
+}
+
+.socials-grid a i {
+
+    font-size: 3rem;
+    margin-left: 1rem;
+
+}
+
+.socials-grid a:hover {
+
+    transform: scale(1.06);
+    background-color: var(--6);
+
+}
+
+@media only screen and (min-width: 2400px)
+{
+    html {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1440px)
+{
+    html {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1110px)
+{   
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    html {
+        font-size: 10px;
+    }
+}
