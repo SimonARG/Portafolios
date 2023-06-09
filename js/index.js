@@ -1,111 +1,86 @@
-$(document).ready(function(){
+const inlineWordContainer = document.querySelectorAll(".inline-word-container"),
+inlineWordChildren = document.querySelectorAll(".inline-word > div");
 
-    var inlineWordContainer = document.querySelectorAll(".inline-word-container"),
-    inlineWordChildren = document.querySelectorAll(".inline-word > div");
+inlineWordContainer.forEach(function(container) {
 
-    inlineWordContainer.forEach(function(container) {
+    container.addEventListener("mouseenter", function() {
 
-        container.addEventListener("mouseenter", function() {
+        container.classList.add("inline-word-container--active");
 
-            container.classList.add("inline-word-container--active");
+        inlineWordChildren.forEach(function(children) {
 
-            inlineWordChildren.forEach(function(children) {
-
-                setTimeout(function() 
-                {
-                    container.classList.remove("inline-word-container--active");
-                }, 1600);
-
-            });
+            setTimeout(function() 
+            {
+                container.classList.remove("inline-word-container--active");
+            }, 1600);
 
         });
 
     });
 
-    var inlineWordContainer = document.querySelectorAll(".inline-word-container"),
-    inlineWordChildren = document.querySelectorAll(".inline-word-jp > div");
+});
 
-    inlineWordContainer.forEach(function(container) {
+const inlineWordContainerJp = document.querySelectorAll(".inline-word-container"),
+inlineWordChildrenJp = document.querySelectorAll(".inline-word-jp > div");
 
-        container.addEventListener("mouseenter", function() {
+inlineWordContainerJp.forEach(function(container) {
 
-            container.classList.add("inline-word-container--active");
+    container.addEventListener("mouseenter", function() {
 
-            inlineWordChildren.forEach(function(children) {
+        container.classList.add("inline-word-container--active");
 
-                setTimeout(function()
-                {
-                    container.classList.remove("inline-word-container--active");
-                }, 1600);
+        inlineWordChildrenJp.forEach(function(children) {
 
-            });
+            setTimeout(function()
+            {
+                container.classList.remove("inline-word-container--active");
+            }, 1600);
 
         });
 
     });
 
-    var aboutShow = false;
-    var socialsShow = false;
+});
 
-    $(".left-bar-about").click(function() {
+var aboutShow = false;
+var socialsShow = false;
 
-        if (socialsShow == true) {
-
-            $("#socials").hide("fold", 318);
-            socialsShow = false;
-
-        }
-
-        if (aboutShow == false) {
-
-            $("#about").show("fold", 318);
-            aboutShow = true;
-
-        } else {
-
-            $("#about").hide("fold", 318);
-            aboutShow = false;
-
-        }
-
-    })
-
-    $(".left-bar-socials").click(function() {
-
-        if (aboutShow == true) {
-
-            $("#about").hide("fold", 318);
-            aboutShow = false;
-
-        }
-
-        if (socialsShow == false) {
-
-            $("#socials").show("fold", 318);
-            socialsShow = true;
-
-        } else {
-
-            $("#socials").hide("fold", 318);
-            socialsShow = false;
-
-        }
-
-    })
-
-    $(".about-closer").click(function() {
-
-        $("#about").hide("fold", 318);
-        aboutShow = false;
-
-    });
-
-    $(".socials-closer").click(function() {
-
+$(".left-bar-about").click(function() {
+    if (socialsShow == true) {
         $("#socials").hide("fold", 318);
         socialsShow = false;
+    }
 
-    });
+    if (aboutShow == false) {
+        $("#about").show("fold", 318);
+        aboutShow = true;
+    } else {
+        $("#about").hide("fold", 318);
+        aboutShow = false;
+    }
+})
 
+$(".left-bar-socials").click(function() {
+    if (aboutShow == true) {
+        $("#about").hide("fold", 318);
+        aboutShow = false;
+    }
 
+    if (socialsShow == false) {
+        $("#socials").show("fold", 318);
+        socialsShow = true;
+    } else {
+        $("#socials").hide("fold", 318);
+        socialsShow = false;
+    }
+})
+
+$(".about-closer").click(function() {
+    $("#about").hide("fold", 318);
+    aboutShow = false;
+});
+
+$(".socials-closer").click(function() {
+    $("#socials").hide("fold", 318);
+    socialsShow = false;
 });

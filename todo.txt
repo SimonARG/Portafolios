@@ -1,4 +1,0 @@
-1) Build HTML-CSS blog squeleton
-2) Add dynamic PHP gallery to the blog
-3) Add dynamic PHP posting to the blog
-4) Build dynamic PHP torrent repository
