@@ -4,20 +4,16 @@ inlineWordChildren = document.querySelectorAll(".inline-word > div");
 inlineWordContainer.forEach(function(container) {
 
     container.addEventListener("mouseenter", function() {
-
         container.classList.add("inline-word-container--active");
 
         inlineWordChildren.forEach(function(children) {
-
             setTimeout(function() 
             {
                 container.classList.remove("inline-word-container--active");
             }, 1600);
-
         });
 
     });
-
 });
 
 const inlineWordContainerJp = document.querySelectorAll(".inline-word-container"),
@@ -26,20 +22,16 @@ inlineWordChildrenJp = document.querySelectorAll(".inline-word-jp > div");
 inlineWordContainerJp.forEach(function(container) {
 
     container.addEventListener("mouseenter", function() {
-
         container.classList.add("inline-word-container--active");
 
         inlineWordChildrenJp.forEach(function(children) {
-
             setTimeout(function()
             {
                 container.classList.remove("inline-word-container--active");
             }, 1600);
-
         });
 
     });
-
 });
 
 var aboutShow = false;
