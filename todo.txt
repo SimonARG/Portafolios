@@ -1,0 +1,4 @@
+Finish projects page
+Replace socials link for something less out-there
+Small CV changes
+Push to simonarg.github.io
