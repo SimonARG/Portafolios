@@ -389,12 +389,11 @@ body {
     color: var(--1brightest);
     position: absolute;
     user-select: none;
-    transition: transform .3s ease, color .3s;
+    transition: .3s;
     z-index: 3;
 }
 
 .logo:hover {
-    transform: scale(1.2);
     color: var(--4);
 }
 
