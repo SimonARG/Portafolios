@@ -1,3 +1,4 @@
 Finish projects page
 Replace socials link for something less out-there
 Add LinkedIn
+Make language switcher and translate
