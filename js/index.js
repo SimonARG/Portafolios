@@ -7,8 +7,7 @@ inlineWordContainer.forEach(function(container) {
         container.classList.add("inline-word-container--active");
 
         inlineWordChildren.forEach(function(children) {
-            setTimeout(function() 
-            {
+            setTimeout(function() {
                 container.classList.remove("inline-word-container--active");
             }, 1600);
         });
@@ -25,8 +24,7 @@ inlineWordContainerJp.forEach(function(container) {
         container.classList.add("inline-word-container--active");
 
         inlineWordChildrenJp.forEach(function(children) {
-            setTimeout(function()
-            {
+            setTimeout(function() {
                 container.classList.remove("inline-word-container--active");
             }, 1600);
         });
@@ -34,8 +32,8 @@ inlineWordContainerJp.forEach(function(container) {
     });
 });
 
-var aboutShow = false;
-var socialsShow = false;
+let aboutShow = false;
+let socialsShow = false;
 
 $(".left-bar-about").click(function() {
     if (socialsShow == true) {
@@ -75,4 +73,29 @@ $(".about-closer").click(function() {
 $(".socials-closer").click(function() {
     $("#socials").hide("fold", 318);
     socialsShow = false;
+});
+
+const btnBlog = document.querySelectorAll(".blog-btn"),
+      blog = document.querySelector(".blog-pu"),
+      btnPortfolio = document.querySelectorAll(".portfolio-btn"),
+      portfolio = document.querySelector(".portfolio-pu"),
+      btnAmbient = document.querySelectorAll(".ambient-btn"),
+      ambient = document.querySelector(".ambient-pu");
+
+btnBlog.forEach(btn => {
+    btn.addEventListener("click", () => {
+        blog.classList.toggle("blog-pu--active");
+    });
+});
+
+btnPortfolio.forEach(btn => {
+    btn.addEventListener("click", () => {
+        portfolio.classList.toggle("portfolio-pu--active");
+    });
+});
+
+btnAmbient.forEach(btn => {
+    btn.addEventListener("click", () => {
+        ambient.classList.toggle("ambient-pu--active");
+    });
 });
