@@ -332,7 +332,7 @@ body {
 .socials-container {
     background-color: var(--7);
     height: auto;
-    width: max(90vw, auto);
+    width: 90vw;
     color: var(--2);
     padding: 2rem 2rem 3.4rem 2rem;
     border: 1px solid var(--4);

@@ -1,1 +1,0 @@
-Make language switcher and translate
