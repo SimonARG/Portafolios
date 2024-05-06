@@ -1,84 +1,37 @@
 // Get about, socials and cv popups and buttons
 const socials = document.querySelector(".socials-container");
-const socialsOpen = document.querySelector(".menu-socials");
+const socialsBtn = document.querySelector(".menu-socials");
 const about = document.querySelector(".about-container");
-const aboutOpen = document.querySelector(".menu-about");
+const aboutBtn = document.querySelector(".menu-about");
 const cv = document.querySelector(".cv-container");
-const cvOpen = document.querySelector(".menu-cv");
+const cvBtn = document.querySelector(".menu-cv");
 
 let socialsShow = false;
 let aboutShow = false;
 let cvShow = false;
 
-aboutOpen.addEventListener("click", () => {
-  if (socialsShow == true) {
-    socials.classList.remove("active");
-    socialsShow = false;
-  }
+// Toggle popups
+const togglePopup = (popup, reactive) => {
+  popup.classList.toggle('active');
+  reactive = !reactive;
+}
 
-  if (cvShow == true) {
-    cv.classList.remove("active");
-    cvShow = false;
-  }
-
-  if (aboutShow == false) {
-    about.classList.add("active");
-    aboutShow = true;
-  } else {
-    about.classList.remove("active");
-    aboutShow = false;
-  }
+aboutBtn.addEventListener('click', () => {
+  togglePopup(about, aboutShow);
 });
 
-// Open socials popup
-socialsOpen.addEventListener("click", () => {
-  if (aboutShow == true) {
-    about.classList.remove("active");
-    aboutShow = false;
-  }
-
-  if (cvShow == true) {
-    cv.classList.remove("active");
-    cvShow = false;
-  }
-
-  if (socialsShow == false) {
-    socials.classList.add("active");
-    socialsShow = true;
-  } else {
-    socials.classList.remove("active");
-    socialsShow = false;
-  }
+socialsBtn.addEventListener('click', () => {
+  togglePopup(socials, socialsShow);
 });
 
-// Open cv popup
-cvOpen.addEventListener("click", () => {
-  if (aboutShow == true) {
-    about.classList.remove("active");
-    aboutShow = false;
-  }
-
-  if (socialsShow == true) {
-    socials.classList.remove("active");
-    socialsShow = false;
-  }
-
-  if (cvShow == false) {
-    cv.classList.add("active");
-    cvShow = true;
-  } else {
-    socials.classList.remove("active");
-    cvShow = false;
-  }
+cvBtn.addEventListener('click', () => {
+  togglePopup(cv, cvShow);
 });
 
-const githubBtn = document.querySelector(".menu-github");
-const linkedinBtn = document.querySelector(".menu-linkedin");
+// Open GitHub and LinkedIn on a new window on click of their sidebar items
+const githubBtn = document.querySelector('.menu-github');
+const linkedinBtn = document.querySelector('.menu-linkedin');
 
-githubBtn.addEventListener('click', function () {
-  window.open('https://github.com/SimonARG', '_blank');
-});
+githubBtn.addEventListener('click', () => window.open('https://github.com/SimonARG', '_blank'));
 
-linkedinBtn.addEventListener('click', function () {
-  window.open('https://www.linkedin.com/in/simonpaul99/', '_blank');
-});
+linkedinBtn.addEventListener('click', () => window.open('https://www.linkedin.com/in/simonpaul99/', '_blank'));

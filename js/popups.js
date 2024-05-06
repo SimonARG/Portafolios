@@ -1,45 +1,38 @@
-const socialsClose = document.querySelector(".socials-closer");
-const aboutClose = document.querySelector(".about-closer");
-const cvClose = document.querySelector(".cv-closer");
+const socialsCloser = document.querySelector('.socials-closer');
+const aboutCloser = document.querySelector('.about-closer');
+const cvCloser = document.querySelector('.cv-closer');
 
-// Close about popup
-aboutClose.addEventListener("click", () => {
-    about.classList.remove("active");
-    aboutShow = false;
-});
+// Close popup on click of its closer button
+const checkAndclosePopup = (popup, reactive) => {
+  if (popup.classList.contains('active')) {
+    popup.classList.remove('active');
+    reactive = false;
+  }
+}
 
-// Close socials popup
-socialsClose.addEventListener("click", () => {
-    socials.classList.remove("active");
-    socialsShow = false;
-});
+aboutCloser.addEventListener('click', () =>
+  checkAndclosePopup(about, aboutShow)
+);
 
-// Close cv popup
-cvClose.addEventListener("click", () => {
-    cv.classList.remove("active");
-    cvShow = false;
-});
+socialsCloser.addEventListener('click', () =>
+  checkAndclosePopup(socials, socialsShow)
+);
+
+cvCloser.addEventListener('click', () =>
+  checkAndclosePopup(cv, cvShow)
+);
 
 // Close any open popup on click of the window
-window.addEventListener('click', function (event) {
-    if (!(event.target.closest(".socials-container")) && !(event.target.closest(".menu-socials")) && !(event.target.closest(".socials-closer"))) {
-        if (socials.classList.contains("active")) {
-            socials.classList.remove("active");
-            socialsShow = false;
-        }
-    }
+const eventTargetRollOver = (event, container, button, closer, reactive, popup) => {
+  if (!(event.target.closest(container)) && !(event.target.closest(button)) && !(event.target.closest(closer))) {
+    checkAndclosePopup(popup, reactive);
+  }
+}
 
-    if (!(event.target.closest(".about-container")) && !(event.target.closest(".menu-about")) && !(event.target.closest(".about-closer"))) {
-        if (about.classList.contains("active")) {
-            about.classList.remove("active");
-            aboutShow = false;
-        }
-    }
+window.addEventListener('click', (event) => {
+  eventTargetRollOver(event, '.socials-container', '.menu-socials', '.socials-closer', socialsShow, socials);
 
-    if (!(event.target.closest(".cv-container")) && !(event.target.closest(".menu-cv")) && !(event.target.closest(".cv-closer"))) {
-        if (cv.classList.contains('active')) {
-            cv.classList.remove('active');
-            cvShow = false;
-        }
-    }
+  eventTargetRollOver(event, '.about-container', '.menu-about', '.about-closer', aboutShow, about);
+
+  eventTargetRollOver(event, '.cv-container', '.menu-cv', '.cv-closer', cvShow, cv);
 });
