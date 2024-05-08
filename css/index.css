@@ -145,7 +145,7 @@ section {
 
 ol,
 ul,
-nav {
+menu, {
   list-style: none;
 }
 
@@ -602,7 +602,7 @@ body {
 |------------------------------------------------------------
 */
 
-.menu > nav > li {
+.menu > menu > li {
   background-color: var(--7);
   transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
@@ -614,7 +614,7 @@ body {
   transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.menu > nav > li > div {
+.menu > menu > li > div {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -622,13 +622,13 @@ body {
   color: var(--1brightest);
 }
 
-.menu > nav > li > div > span {
+.menu > menu > li > div > span {
   font-variation-settings:
     "wdth" 62.5;
   font-size: 1.6rem;
 }
 
-.menu > nav > li > div > i {
+.menu > menu > li > div > i {
   font-size: 2.4rem;
   transition: transform .05s ease-in-out;
 }
