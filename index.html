@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -26,19 +26,34 @@
 
 <body>
   <div class="body-container flex-c f-al-cent f-just-cent">
+    <div class="locale-container flex-r fill-width f-just-cent pos-ab">
+      <button class="btn top-lang-btn lang-btn es-btn flex-r f-al-cent f-just-cent">ES</button>
+      <button class="btn top-lang-btn lang-btn en-btn flex-r f-al-cent f-just-cent">EN</button>
+      <button class="btn top-lang-btn lang-btn ja-btn flex-r f-al-cent f-just-cent">JA</button>
+    </div>
+
     <div class="ani-name">
-      <h1 class="name">SIMÓN P. CHASNOVSKY</h1>
+      <h1 class="name spanish">SIMÓN P. CHASNOVSKY</h1>
+      <h1 class="name english hidden">SIMON P. CHASNOVSKY</h1>
+      <h1 class="name japanese hidden">
+        <span>サイモン</span>
+        <span class="ja-dot">・</span>
+        <br class="ja-space">
+        <span>チャスノブスキ</span>
+      </h1>
     </div>
 
     <div class="inline-word-container">
       <div class="inline-word flex-c f-al-cent hide-of-x hide-of-y">
         <span>Programador</span>
+        <button class="btn side-lang-btn lang-btn es-btn pos-ab f-al-cent f-just-cent">ES</button>
         <span class="inline-word-bottom">PHP HTML JS CSS</span>
       </div>
     </div>
 
     <div class="inline-word-container">
       <div class="inline-word flex-c f-al-cent hide-of-x hide-of-y">
+        <button class="btn side-lang-btn lang-btn en-btn pos-ab f-al-cent f-just-cent">EN</button>
         <span>Programmer</span>
         <span class="inline-word-bottom">LARAVEL SQL VUE</span>
       </div>
@@ -46,20 +61,30 @@
 
     <div class="inline-word-container">
       <div class="inline-word flex-c f-al-cent hide-of-x hide-of-y">
+        <button class="btn side-lang-btn lang-btn ja-btn pos-ab f-al-cent f-just-cent">JA</button>
         <span>プログラマー</span>
         <span class="inline-word-bottom">GIT JAVA PYTHON C++</span>
       </div>
     </div>
 
-    <button class="btn projects-btn">
+    <button class="btn projects-btn spanish">
       <span>PROYECTOS</span>
+    </button>
+
+    <button class="btn projects-btn english hidden">
+      <span>PROJECTS</span>
+    </button>
+
+    <button class="btn projects-btn japanese hidden">
+      <span>プロジェクト</span>
     </button>
 
     <div class="about-container">
       <button class="btn pop-closer about-closer">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <p class="about-text">Hola! Soy Simón Paul Chasnovsky, para usted, programador. Mi área de conocimiento general es
+      <p class="about-text spanish">Hola! Soy Simón Paul Chasnovsky, para usted, programador. Mi área de conocimiento
+        general es
         full-stack web-dev manejando PHP (Laravel) y bases de datos SQL (MySQL) en el back-end, y HTML, CSS (SASS,
         PostCSS, TailwindCSS) y JavaScript (VueJS) en el front-end. Esto implica conocimiento de GIT, y también me gusta
         trabajar con C++, OpenGL y Java, principalmente en lo que aplica al desarrollo de video-juegos y aplicaciones de
@@ -70,6 +95,21 @@
         manejo de redes y troubleshooting).</br></br>Si te agrada mi portafolios, no dudes en contactarme, seguramente
         sea una adición valiosa a tu equipo; y si querés saber más sobre mi, andá clickeando los links en esta página.
       </p>
+      <p class="english hidden">Hi! I'm Simon Paul Chasnovsky, for you, programmer. My general knowledge area is
+        full-stack web development with PHP (Laravel) and SQL databases (MySQL) in the backend, and HTML, CSS (SASS,
+        PostCSS, TailwindCSS), and JavaScript (VueJS) in the frontend. I'm familiar with usage of GIT, and I also enjoy
+        working on C++, OpenGL and Java, mainly for desktop and mobile application development (this is more on the
+        hobby side of things). I'm very interested in technology, specially computing, which has led me to adquire
+        experience in software like Adobe's Creative Suit (Photoshop, Lightroom, Premiere, After-Effects, Illustrator,
+        Audition), and the desktop suite's by Google and Microsoft (Word, Excel, Access, PowerPoint). I also really
+        enjoy working on hardware (planning, building, troubleshooting and maitaining computer and network
+        systems).</br></br>If you like my portfolio, don't hesitate to contact me, I'd surely make a nice addition to
+        your team; and if you want to know more about me, feel free to go around clicking the links in this page.</p>
+      <p class="japanese hidden" style="font-size: 1.2rem;">
+        こんにちは！私はサイモン・ポール・チャスノブスキです。あなたにとって、プログラマーです。私の一般的な知識領域は、フルスタックのWeb開発であり、バックエンドではPHP（Laravel）とSQLデータベース（MySQL）を、フロントエンドではHTML、CSS（SASS、PostCSS、TailwindCSS）、JavaScript（VueJS）を扱います。これにはGITの知識も含まれます。また、C++、OpenGL、およびJavaでの作業も好みますが、これは主にゲーム開発やデスクトップおよびモバイルアプリケーション開発に関連しています（これは趣味としての活動です）。私はテクノロジーに非常に興味があり、特にコンピューティングに関心があります。そのため、Adobe
+        Creative Suite（Photoshop、Lightroom、Premiere、After-Effects、Illustrator、Audition）、GoogleおよびMicrosoft
+        Officeスイート（Word、Excel、Access、PowerPoint）、およびハードウェア（デスクトップおよびサーバーの計画と構築、ネットワーク管理とトラブルシューティング）の経験もあります。<br><br>私のポートフォリオが気に入ったら、お気軽にお問い合わせください。あなたのチームに素敵な追加となることを確約します。もし私についてもっと知りたい場合は、このページのリンクをクリックして、自由にご覧ください。
+      </p>
     </div>
 
     <div class="socials-container">
@@ -77,39 +117,49 @@
         <i class="fa-solid fa-xmark"></i>
       </button>
       <div class="socials-grid">
-
-        <a class="socials-instagram flex-r f-al-cent f-just-end" href="https://www.instagram.com/heat.death_999/" target="_blank"
-          rel="noopener noreferrer">
-          <span>Instagram</span>
+        <a class="socials-instagram flex-r f-al-cent f-just-end" href="https://www.instagram.com/heat.death_999/"
+          target="_blank" rel="noopener noreferrer">
+          <span class="spanish">Instagram</span>
+          <span class="english hidden">Instagram</span>
+          <span class="japanese hidden" style="font-size: 1.3rem; font-weight: 600;">インスタグラム</span>
           <i class="fa-brands fa-square-instagram flex-c f-just-cent" style="color: white;"></i>
         </a>
 
-        <a class="socials-linkedin flex-r f-al-cent f-just-end" href="https://www.linkedin.com/in/simonpaul99/" target="_blank"
-          rel="noopener noreferrer">
-          <span>LinkedIn</span>
+        <a class="socials-linkedin flex-r f-al-cent f-just-end" href="https://www.linkedin.com/in/simonpaul99/"
+          target="_blank" rel="noopener noreferrer">
+          <span class="spanish">LinkedIn</span>
+          <span class="english hidden">LinkedIn</span>
+          <span class="japanese hidden" style="font-size: 1.3rem; font-weight: 600;">リンクトイン</span>
           <i class="fa-brands fa-linkedin flex-c f-just-cent" style="color: white;"></i>
         </a>
 
-        <a class="socials-facebook flex-r f-al-cent f-just-end" href="https://www.facebook.com/HitDeth99/" target="_blank"
-          rel="noopener noreferrer">
-          <span>Facebook</span>
+        <a class="socials-facebook flex-r f-al-cent f-just-end" href="https://www.facebook.com/HitDeth99/"
+          target="_blank" rel="noopener noreferrer">
+          <span class="spanish">Facebook</span>
+          <span class="english hidden">Facebook</span>
+          <span class="japanese hidden" style="font-size: 1.3rem; font-weight: 600;">フェイスブック</span>
           <i class="fa-brands fa-square-facebook flex-c f-just-cent" style="color: white;"></i>
         </a>
 
-        <a class="socials-last-fm flex-r f-al-cent f-just-end" href="https://www.last.fm/user/Heat_Death_999" target="_blank"
-          rel="noopener noreferrer">
-          <span>Last.FM</span>
+        <a class="socials-last-fm flex-r f-al-cent f-just-end" href="https://www.last.fm/user/Heat_Death_999"
+          target="_blank" rel="noopener noreferrer">
+          <span class="spanish">Last.FM</span>
+          <span class="english hidden">Last.FM</span>
+          <span class="japanese hidden" style="font-size: 1.3rem; font-weight: 600;">ラスト.エフエム</span>
           <i class="fa-brands fa-square-lastfm flex-c f-just-cent" style="color: white;"></i>
         </a>
 
-        <a class="socials-rym flex-r f-al-cent f-just-end" href="https://rateyourmusic.com/~SimonARG" target="_blank" rel="noopener noreferrer">
+        <a class="socials-rym flex-r f-al-cent f-just-end" href="https://rateyourmusic.com/~SimonARG" target="_blank"
+          rel="noopener noreferrer">
           <span>RYM</span>
           <i class="fa-solid fa-headphones-simple flex-c f-just-cent" style="color: white;"></i>
         </a>
 
-        <a class="socials-letterboxd flex-r f-al-cent f-just-end" href="https://letterboxd.com/Heat_Death_999/" target="_blank"
-          rel="noopener noreferrer">
-          <span>Letterboxd</span>
+        <a class="socials-letterboxd flex-r f-al-cent f-just-end" href="https://letterboxd.com/Heat_Death_999/"
+          target="_blank" rel="noopener noreferrer">
+          <span class="spanish">Letterboxd</span>
+          <span class="english hidden">Letterboxd</span>
+          <span class="japanese hidden" style="font-size: 1.3rem; font-weight: 600;">レッテルボックス</span>
           <i class="fa-solid fa-film flex-c f-just-cent" style="color: white;"></i>
         </a>
       </div>
@@ -139,31 +189,41 @@
     <nav>
       <li>
         <div class="menu-about">
-          <span>Sobre Mi</span>
+          <span class="spanish">Sobre Mi</span>
+          <span class="english hidden">About Me</span>
+          <span class="japanese hidden" style="font-size: 1.1rem; font-weight: 600;">私について</span>
           <i class="fa-solid fa-address-card" style="color: white;"></i>
         </div>
       </li>
       <li>
         <div class="menu-github">
-          <span>GitHub</span>
+          <span class="spanish">GitHub</span>
+          <span class="english hidden">GitHub</span>
+          <span class="japanese hidden" style="font-size: 1.1rem; font-weight: 600;">ギットハブ</span>
           <i class="fa-brands fa-github" style="color: white;"></i>
         </div>
       </li>
       <li>
         <div class="menu-cv">
-          <span>CV</span>
+          <span class="spanish">CV</span>
+          <span class="english hidden">CV</span>
+          <span class="japanese hidden" style="font-size: 1.1rem; font-weight: 600;">履歴書</span>
           <i class="fa-solid fa-file" style="color: white;"></i>
         </div>
       </li>
       <li>
         <div class="menu-socials">
-          <span>Sociales</span>
+          <span class="spanish">Sociales</span>
+          <span class="english hidden">Socials</span>
+          <span class="japanese hidden" style="font-size: 1.1rem; font-weight: 600;">ソーシャル</span>
           <i class="fa-solid fa-address-book" style="color: white;"></i>
         </div>
       </li>
       <li>
         <div class="menu-linkedin">
-          <span>LinkedIn</span>
+          <span class="spanish">LinkedIn</span>
+          <span class="english hidden">LinkedIn</span>
+          <span class="japanese hidden" style="font-size: 1.5rem; font-weight: 600;">ﾘﾝｹﾄﾞｲﾝ</span>
           <i class="fa-brands fa-linkedin" style="color: white;"></i>
         </div>
       </li>
@@ -172,11 +232,14 @@
 
   <footer class="footer-container flex-r f-just-cent f-al-cent">
     <address class="adress">
-      <span>Email:</span>
+      <span class="spanish">Email:</span>
+      <span class="english hidden">Email:</span>
+      <span class="japanese hidden" style="font-size: 1rem;">電子メール：</span>
       <span>simonchasnovsky@gmail.com</span>
     </address>
   </footer>
 
+  <script src="js/locale.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/popups.js"></script>
   <script src="js/index.js"></script>
