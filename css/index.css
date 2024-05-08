@@ -144,8 +144,7 @@ section {
 }
 
 ol,
-ul,
-menu, {
+ul {
   list-style: none;
 }
 
@@ -602,7 +601,7 @@ body {
 |------------------------------------------------------------
 */
 
-.menu > menu > li {
+.menu > ul > li {
   background-color: var(--7);
   transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
@@ -614,7 +613,7 @@ body {
   transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.menu > menu > li > div {
+.menu > ul > li > div {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -622,13 +621,13 @@ body {
   color: var(--1brightest);
 }
 
-.menu > menu > li > div > span {
+.menu > ul > li > div > span {
   font-variation-settings:
     "wdth" 62.5;
   font-size: 1.6rem;
 }
 
-.menu > menu > li > div > i {
+.menu > ul > li > div > i {
   font-size: 2.4rem;
   transition: transform .05s ease-in-out;
 }
@@ -1085,17 +1084,17 @@ p::-webkit-scrollbar-thumb {
     margin-top: -6rem;
   }
 
-  .menu nav {
+  .menu ul {
     display: flex;
   }
 
-  .menu nav li div {
+  .menu ul li div {
     min-width: 20vw;
     width: 20svw;
     flex-direction: column;
   }
 
-  .menu nav li div span {
+  .menu ul li div span {
     text-align: center;
     white-space: nowrap;
     margin-bottom: 2rem;
@@ -1197,15 +1196,15 @@ p::-webkit-scrollbar-thumb {
     transform: translate(0, -50%);
   }
 
-  .menu nav li div {
+  .menu ul li div {
     width: 13rem;
   }
 
-  .menu nav li div span {
+  .menu ul li div span {
     white-space: nowrap;
   }
 
-  .menu nav li div i {
+  .menu ul li div i {
     margin-left: 1.55rem;
   }
 
@@ -1328,7 +1327,7 @@ p::-webkit-scrollbar-thumb {
     transform: translate(0, -50%);
   }
 
-  .menu nav li div {
+  .menu ul li div {
     width: 13rem;
   }
 
@@ -1431,7 +1430,7 @@ p::-webkit-scrollbar-thumb {
     transform: translate(0, -50%);
   }
 
-  .menu nav li div {
+  .menu ul li div {
     width: 13rem;
   }
 
@@ -1525,7 +1524,7 @@ p::-webkit-scrollbar-thumb {
     transform: translate(0, -50%);
   }
 
-  .menu nav li div {
+  .menu ul li div {
     width: 13rem;
   }
 
