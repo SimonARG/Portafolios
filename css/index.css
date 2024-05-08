@@ -395,6 +395,10 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
+
 /*
 |------------------------------------------------------------
 | Body
@@ -458,6 +462,22 @@ body {
   padding-top: .3rem;
 }
 
+.name.japanese,
+.projects-title.japanese {
+  white-space: normal;
+  text-align: center;
+  font-size: 3rem;
+  word-break: keep-all;
+}
+
+.name.japanese span {
+  white-space: nowrap;
+}
+
+.ja-dot {
+  display: none;
+}
+
 .ani-name:hover {
   background: linear-gradient(120deg, var(--1brightest), var(--1brightest), var(--1brightest), var(--1brightest), var(--1brightest), var(--1brightest), var(--5), var(--4), var(--1brightest)) var(--1brightest) no-repeat 0 0;
   background-size: 0% 100%;
@@ -499,15 +519,47 @@ body {
   transform: translateY(-100%);
 }
 
+.locale-container {
+  gap: 3rem;
+  top: 18%;
+}
+
+.lang-btn {
+  border: 1px solid var(--4);
+  border-radius: 50%;
+  color: var(--1brightest);
+}
+
+.side-lang-btn {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  margin-top: .8rem;
+  display: none;
+}
+
+.top-lang-btn {
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.8rem;
+}
+
+.lang-btn:hover {
+  box-shadow: 0 0 10px 4px var(--6);
+  border: 2px solid var(--3);
+  background-color: var(--6);
+}
+
 .projects-btn {
   background-color: var(--7);
-  padding: .3rem;
+  padding: .3rem 1.2rem;
   margin-top: 1.7rem;
   border: 2px solid var(--4);
   color: var(--1brightest);
   transition: box-shadow .2s ease, border .2s ease, background-color .2s ease;
-  width: 11rem;
+  width: fit-content;
   text-align: center;
+  user-select: none;
 }
 
 .projects-btn:hover {
@@ -527,7 +579,7 @@ body {
 }
 
 .projects-btn span:after {
-  content: '\21B7';
+  content: '➔';
   position: absolute;
   opacity: 0;
   top: 0;
@@ -726,9 +778,14 @@ body {
   transition: .2s text-shadow;
 }
 
-.adress span:first-child {
-  color: var(--3);
+.adress span {
+  color: var(--4);
   user-select: none;
+}
+
+.adress span:last-child {
+  color: var(--3);
+  user-select: all;
 }
 
 .adress:hover {
@@ -807,6 +864,7 @@ body {
   overflow: hidden;
   transition: all .3s ease-in-out;
   position: relative;
+  user-select: none;
 }
 
 .img-container:hover > img {
@@ -820,6 +878,8 @@ body {
 
 .project img {
   transition: .3s ease;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 .btn-container {
@@ -839,6 +899,11 @@ body {
   white-space: nowrap;
   font-variation-settings:
     "wdth" 62.5;
+}
+
+.pj-btn > span.japanese {
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .pj-btn i {
@@ -928,6 +993,11 @@ body {
   margin-bottom: .5rem;
 }
 
+.pj-info h2.japanese {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
 .tech-list {
   margin-bottom: .8rem;
   gap: .4rem;
@@ -954,6 +1024,12 @@ body {
   margin-bottom: .5rem;
 }
 
+.pj-info h3.japanese {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--4);
+}
+
 .pj-info p {
   white-space: pre-line;
   color: var(--2);
@@ -973,6 +1049,11 @@ body {
   border: 1px solid var(--4);
   width: fit-content;
   transition: .2s ease;
+}
+
+.source > span.japanese {
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .source:hover {
@@ -1093,6 +1174,23 @@ p::-webkit-scrollbar-thumb {
     font-size: 13px;
   }
 
+  .locale-container {
+    display: none;
+  }
+
+  .side-lang-btn {
+    display: flex;
+    right: 25%;
+  }
+
+  .ja-dot {
+    display: inline-block;
+  }
+
+  .ja-space {
+    display: none;
+  }
+
   .menu {
     margin-left: -8.2rem;
     top: 50%;
@@ -1108,7 +1206,7 @@ p::-webkit-scrollbar-thumb {
   }
 
   .menu nav li div i {
-    margin-left: 1.6rem;
+    margin-left: 1.55rem;
   }
 
   .menu li:hover {
@@ -1220,6 +1318,10 @@ p::-webkit-scrollbar-thumb {
     font-size: 14px;
   }
 
+  .side-lang-btn {
+    right: 31%;
+  }
+
   .menu {
     margin-left: -8.2rem;
     top: 50%;
@@ -1317,6 +1419,10 @@ p::-webkit-scrollbar-thumb {
 @media only screen and (min-width: 1158px) {
   :root {
     font-size: 15px;
+  }
+
+  .side-lang-btn {
+    right: 35%;
   }
 
   .menu {
@@ -1500,11 +1606,6 @@ p::-webkit-scrollbar-thumb {
   .projects-title {
     background-color: var(--7);
   }
-
-  /* .project-pu-container .pj-vid {
-    min-width: 60vw;
-    width: 60svw;
-  } */
 }
 
 @media only screen and (max-aspect-ratio: 1/1) {
@@ -1530,21 +1631,16 @@ p::-webkit-scrollbar-thumb {
     padding: .5rem .8rem;
   }
 
-  .pj-info span {
-    padding: .1rem .3rem;
+  .pj-info p {
     font-size: 1.7rem;
   }
 
-  .pj-info p {
-    font-size: 1.7rem;
+  .pj-info p.japanese {
+    font-size: 1.5rem;
   }
 }
 
 @media only screen and (min-aspect-ratio: 1/1) {
-  /* .project-pu-container .pj-vid {
-    height: 30svw;
-  } */
-
   .project-pu-container {
     display: flex;
   }
@@ -1563,13 +1659,12 @@ p::-webkit-scrollbar-thumb {
     line-height: normal;
   }
 
-  .pj-info span {
-    padding: .07rem .4rem;
-    font-size: 1.4rem;
-  }
-
   .pj-info p {
     font-size: 1.3rem;
     line-height: 1.4rem;
+  }
+
+  .pj-info p.japanese {
+    font-size: 1.1rem;
   }
 }

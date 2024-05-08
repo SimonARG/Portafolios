@@ -16,8 +16,10 @@ inlineWordContainer.forEach(function (container) {
 });
 
 // Get projects button and redirect to projects page on click
-const projectsBtn = document.querySelector('.projects-btn');
+const projectsBtn = document.querySelectorAll('.projects-btn');
 
-projectsBtn.addEventListener('click', function () {
-  window.location.href = 'projects.html';
-})
+for (let index = 0; index < projectsBtn.length; index++) {
+  projectsBtn[index].addEventListener('click', function () {
+    window.location.href = 'projects.html';
+  })
+}
