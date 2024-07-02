@@ -859,6 +859,14 @@ body {
   grid-area: mixtorrents;
 }
 
+.project.newtab {
+  grid-area: newtab;
+}
+
+.project.mpi {
+  grid-area: mpi;
+}
+
 .img-container {
   overflow: hidden;
   transition: all .3s ease-in-out;
@@ -1134,10 +1142,12 @@ p::-webkit-scrollbar-thumb {
 
   .projects-container {
     grid-template-areas:
-      "portfolio"
-      "blog"
+      "mpi"
+      "mixtorrents"
+      "newtab"
       "ambient"
-      "mixtorrents";
+      "blog"
+      "portfolio";
   }
 
   .project img {
@@ -1265,8 +1275,9 @@ p::-webkit-scrollbar-thumb {
 
   .projects-container {
     grid-template-areas:
-      "portfolio blog"
-      "ambient mixtorrents";
+      "mpi mixtorrents"
+      "ambient newtab"
+      "blog portfolio";
   }
 
   .project img {
@@ -1375,8 +1386,9 @@ p::-webkit-scrollbar-thumb {
 
   .projects-container {
     grid-template-areas:
-      "portfolio blog"
-      "ambient mixtorrents";
+      "mpi mixtorrents"
+      "ambient newtab"
+      "blog portfolio";
   }
 
   .project img {
@@ -1478,8 +1490,9 @@ p::-webkit-scrollbar-thumb {
 
   .projects-container {
     grid-template-areas:
-      "portfolio blog"
-      "ambient mixtorrents";
+      "mpi mixtorrents"
+      "ambient newtab"
+      "blog portfolio";
   }
 
   .project img {
@@ -1572,8 +1585,9 @@ p::-webkit-scrollbar-thumb {
 
   .projects-container {
     grid-template-areas:
-      "portfolio blog"
-      "ambient mixtorrents";
+      "mpi mixtorrents"
+      "ambient newtab"
+      "blog portfolio";
   }
 
   .project img {
