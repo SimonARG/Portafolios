@@ -1586,8 +1586,8 @@ p::-webkit-scrollbar-thumb {
   .projects-container {
     grid-template-areas:
       "mpi mixtorrents"
-      "ambient newtab"
-      "blog portfolio";
+      "ambient blog"
+      "newtab portfolio";
   }
 
   .project img {
